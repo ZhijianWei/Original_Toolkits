@@ -38,14 +38,8 @@ ax.set_xlabel('Wavelength (nm)', fontsize=22,labelpad=15)
 ax.set_ylabel('Scale', fontsize=22,labelpad=10) #labelpad坐标轴间隔
 ax.set_zlabel('Wavelet Power', fontsize=22,labelpad=10)
 
-# # 设置坐标轴刻度
-# ax.set_xlim(350, 2500)
-# ax.set_ylim(min(scales), max(scales))
-# # 根据小波功率数据调整Z轴范围
-# ax.set_zlim(min(Z), max(Z))
-# 设置坐标轴刻度
 ax.set_xlim(350, 2500)  # 将X轴的起点设置为400
-ax.set_ylim(min(scales), max(scales))  # Y轴范围已经是3到6，无需更改
+ax.set_ylim(min(scales), max(scales)) 
 ax.set_xticks([500, 750, 1000, 1250,1500,1750,2000,2250,2500])
 ax.set_yticks([3, 4, 5, 6])  # 只显示Y轴的刻度3, 4, 5, 6
 ax.set_zticks([-1, -0.5, 0, 0.5, 1])  # 设置Y轴的刻度，可以根据需要调整
@@ -59,12 +53,9 @@ ax.spines['left'].set_linewidth(2)
 ax.spines['right'].set_linewidth(2)
 ax.spines['top'].set_linewidth(2)
 
-# # 添加颜色条
+# # 添加颜色条,图例
 # cbar = fig.colorbar(sc, ax=ax, pad=0.1)
 # cbar.set_label('Wavelet Power')
-
-# # 添加图例
 # ax.legend()
 
-# 显示图形
 plt.show()
